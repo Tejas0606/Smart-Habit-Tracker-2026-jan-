@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Task & Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <header class="app-header">
+    <h1>Smart Task & Habit Tracker</h1>
+    <p>Organize tasks. Build habits. Stay consistent.</p>
+  </header>
+
+  <main class="container">
+
+    
+    <section class="task-section">
+      <h2>Tasks</h2>
+
+      <form id="task-form">
+        <input 
+          type="text" 
+          id="task-input" 
+          placeholder="Enter a task..." 
+          required 
+        />
+
+        <select id="priority-select">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <input type="date" id="due-date" />
+
+        <button type="submit">Add Task</button>
+      </form>
+
+      <div class="filters">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="active" class="filter-btn">Active</button>
+        <button data-filter="completed" class="filter-btn">Completed</button>
+      </div>
+
+      <ul id="task-list">
+      </ul>
+    </section>
+
+    <section class="habit-section">
+      <h2>Habits</h2>
+
+      <form id="habit-form">
+        <input 
+          type="text" 
+          id="habit-input" 
+          placeholder="Enter a habit..." 
+          required 
+        />
+        <button type="submit">Add Habit</button>
+      </form>
+
+      <ul id="habit-list">
+      </ul>
+    </section>
+
+    <section class="stats-section">
+      <h2>Stats</h2>
+      <p>Total Tasks: <span id="total-tasks">0</span></p>
+      <p>Completed Tasks: <span id="completed-tasks">0</span></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
